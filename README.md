@@ -25,15 +25,21 @@ Abre tu terminal y ejecuta el siguiente comando para descargar el código:
 
 Bash
 git clone [https://github.com/JesusDEV91/moundSound-FrontEnd-FinalProyect.git](https://github.com/JesusDEV91/moundSound-FrontEnd-FinalProyect.git)
+
+
 2. Acceder al directorio del proyecto:
 
 Bash
 cd moundSound-FrontEnd-FinalProyect
+
+
 3. Instalar las dependencias:
 Descarga todas las librerías necesarias (Node Modules) para que el proyecto funcione:
 
 Bash
 npm install
+
+
 4. Levantar el servidor de desarrollo:
 Una vez instaladas las dependencias, inicia la aplicación con:
 
