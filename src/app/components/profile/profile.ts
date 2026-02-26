@@ -74,7 +74,7 @@ export class ProfileComponent implements OnInit {
   }
 
   saveChanges() {
-    // TODO: Implementar actualización de perfil
+  
     this.editMode = false;
     console.log('Guardar cambios del perfil');
   }
