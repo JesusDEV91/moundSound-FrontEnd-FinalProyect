@@ -1,6 +1,4 @@
-/* =========================================
-   1. CABECERA (Alineación y Tamaños)
-   ========================================= */
+
 .playlist-page {
   min-height: 100vh;
   background: #f8fafc;
@@ -33,7 +31,7 @@
   line-height: 1.2;
 }
 
-/* BOTONES SUPERIORES IGUALADOS */
+
 .btn-refresh {
   height: 40px !important;
   border-radius: 10px !important;
@@ -53,9 +51,6 @@
   justify-content: center;
 }
 
-/* =========================================
-   2. TARJETAS DE CANCIONES (Play al final + Favoritos)
-   ========================================= */
 .track-card {
   display: flex;
   align-items: center;
@@ -139,9 +134,7 @@
   margin: 2px 0 0 0;
 }
 
-/* =========================================
-   3. BOTONES DE ACCIONES (Favorito + Play)
-   ========================================= */
+
 .track-actions {
   display: flex;
   align-items: center;
@@ -149,7 +142,7 @@
   margin-left: auto;
 }
 
-/* Botón de favorito */
+
 .btn-favorite {
   transition: all 0.2s ease;
   width: 36px !important;
@@ -167,13 +160,13 @@
   transform: scale(1.1);
 }
 
-/* Favorito activo (rojo) */
+
 .btn-favorite[color="warn"] mat-icon {
   color: #f44336 !important;
   animation: heartbeat 0.3s ease-in-out;
 }
 
-/* Favorito inactivo (gris) */
+
 .btn-favorite:not([color="warn"]) mat-icon {
   color: #94a3b8;
 }
@@ -182,7 +175,7 @@
   color: #f44336;
 }
 
-/* Botón de play */
+
 .btn-play-mini {
   color: #6366f1 !important;
   width: 36px !important;
@@ -200,9 +193,7 @@
   transform: scale(1.05);
 }
 
-/* =========================================
-   4. ANIMACIONES
-   ========================================= */
+
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -222,9 +213,7 @@
   to { transform: rotate(360deg); } 
 }
 
-/* =========================================
-   5. ETIQUETAS Y ESTADOS
-   ========================================= */
+
 .audience-tag {
   font-size: 0.65rem;
   font-weight: 700;
@@ -278,9 +267,7 @@
   opacity: 0.5;
 }
 
-/* =========================================
-   6. SKELETON LOADING
-   ========================================= */
+
 .skeleton-card {
   display: flex;
   align-items: center;
@@ -336,9 +323,7 @@
   100% { background-position: -200% 0; }
 }
 
-/* =========================================
-   7. RESPONSIVE
-   ========================================= */
+
 @media (max-width: 768px) {
   .playlist-header {
     flex-direction: column;
@@ -360,7 +345,7 @@
   }
 }
 
-/* Limpieza de botones */
+
 button { 
   appearance: none; 
   -webkit-appearance: none; 
