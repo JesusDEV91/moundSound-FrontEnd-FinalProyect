@@ -2,13 +2,13 @@
 
 <div class="landing-container">
   <div class="hero-section">
-    <!-- Logo o título -->
+   
     <h1 class="app-title">
       <mat-icon class="brand-icon">music_note</mat-icon> MoodSound
     </h1>
     <p class="app-subtitle">Descubre música según tu estado de ánimo</p>
 
-    <!-- Descripción -->
+   
     <div class="description">
       <p>
         <strong>MoodSound</strong> te ayuda a encontrar <strong><i>la música perfecta</i></strong> para cómo te sientes
@@ -19,7 +19,7 @@
       </p>
     </div>
 
-    <!-- Botones de acción -->
+   
     <div class="action-buttons">
   <button 
     mat-raised-button 
@@ -30,7 +30,7 @@
     Comenzar 
   </button>
 
-  <!-- Mostrar botón de registro solo si NO está autenticado -->
+
   <button 
     *ngIf="!authService.isAuthenticated()"
     mat-raised-button 
@@ -42,7 +42,7 @@
   </button>
 </div>
 
-    <!-- Features -->
+   
     <div class="features">
       <div class="feature">
         <mat-icon>text_fields</mat-icon>
