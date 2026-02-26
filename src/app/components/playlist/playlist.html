@@ -68,7 +68,7 @@
       </div>
 
       <div class="track-actions">
-        <!-- Botón de favorito -->
+       
         <button 
           mat-icon-button 
           [color]="isFavorite(track) ? 'warn' : 'default'"
@@ -78,7 +78,7 @@
           <mat-icon>{{ isFavorite(track) ? 'favorite' : 'favorite_border' }}</mat-icon>
         </button>
 
-        <!-- Botón de reproducir -->
+
         <button mat-icon-button class="btn-play-mini" (click)="openTrack(track)">
           <mat-icon>play_circle_outline</mat-icon>
         </button>
