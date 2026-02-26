@@ -10,16 +10,16 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { switchMap, finalize } from 'rxjs/operators';
 
-// Servicios
+
 import { PlaylistService } from '../../services/playlist.service';
 import { PlayerService } from '../../services/player.service';
 import { FavoriteService } from '../../services/favorite.service';
 import { AuthService } from '../../services/auth.service';
 
-// Componentes
+
 import { NavbarComponent } from '../navbar/navbar';
 
-// Modelos
+
 import { PlaylistResponse } from '../../models/playlist.model';
 import { Track, TrackWithFavorite } from '../../models/track.model';
 
@@ -72,7 +72,7 @@ export class PlaylistComponent implements OnInit {
       }
     });
 
-    // Cargar favoritos si está autenticado
+  
     if (this.authService.isAuthenticated()) {
       this.favoriteService.getFavorites().subscribe();
     }
@@ -118,13 +118,11 @@ export class PlaylistComponent implements OnInit {
     this.playerService.playTrack(track);
   }
 
-  /**
-   * Toggle favorito - añade o elimina de favoritos
-   */
+  
   toggleFavorite(track: Track | TrackWithFavorite, event: Event) {
     event.stopPropagation();
 
-    // Verificar si el usuario está autenticado
+ 
     if (!this.authService.isAuthenticated()) {
       this.snackBar.open('Debes iniciar sesión para guardar favoritos', 'Login', {
         duration: 3000,
@@ -141,7 +139,7 @@ export class PlaylistComponent implements OnInit {
 
     this.favoriteService.toggleFavorite(track.id).subscribe({
       next: () => {
-        // Actualizar el estado local
+       
         if (this.playlist?.tracksWithFavorite) {
           const index = this.playlist.tracksWithFavorite.findIndex(t => t.id === track.id);
           if (index !== -1) {
@@ -159,9 +157,7 @@ export class PlaylistComponent implements OnInit {
     });
   }
 
-  /**
-   * Verifica si una canción está en favoritos
-   */
+
   isFavorite(track: Track | TrackWithFavorite): boolean {
     const trackWithFav = track as TrackWithFavorite;
     if (trackWithFav.isFavorite !== undefined) {
@@ -170,9 +166,7 @@ export class PlaylistComponent implements OnInit {
     return this.favoriteService.isFavorite(track.id);
   }
 
-  /**
-   * Obtiene las canciones (con o sin info de favoritos)
-   */
+
   getTracks(): (Track | TrackWithFavorite)[] {
     if (this.playlist?.tracksWithFavorite) {
       return this.playlist.tracksWithFavorite;
