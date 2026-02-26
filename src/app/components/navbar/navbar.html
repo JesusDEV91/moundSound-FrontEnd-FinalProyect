@@ -21,7 +21,7 @@
           Favoritos
         </button>
 
-        <!-- Menú de usuario -->
+        
         <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-button">
           <div class="user-avatar">{{ userInitial }}</div>
           
@@ -58,7 +58,7 @@
         </mat-menu>
       </ng-container>
 
-      <!-- Si NO está autenticado -->
+    
       <ng-container *ngIf="!authService.isAuthenticated()">
         <button mat-button routerLink="/login">
           <mat-icon>login</mat-icon>
