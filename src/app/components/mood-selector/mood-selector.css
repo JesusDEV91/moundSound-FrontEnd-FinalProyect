@@ -1,12 +1,10 @@
-/* =========================================
-   1. CONTENEDOR PRINCIPAL Y FONDO
-   ========================================= */
+
 .mood-selector-container {
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /* Mantenemos tu gradiente radial sutil */
+
   background: radial-gradient(circle at 10% 10%, rgba(63,81,181,0.06), transparent 20%), #f8fafc;
   padding: 40px 32px;
 }
@@ -25,9 +23,6 @@
                     linear-gradient(90deg, rgba(63,81,181,0.01), rgba(255,107,107,0.01));
 }
 
-/* =========================================
-   2. HEADER
-   ========================================= */
 .header {
   display: flex;
   align-items: center;
@@ -54,9 +49,7 @@
   color: #6366f1;
 }
 
-/* =========================================
-   3. SECCIÓN DE ENTRADA Y MOOD-BAR
-   ========================================= */
+
 .text-input-section {
   margin-bottom: 32px;
 }
@@ -71,7 +64,7 @@
   width: 100%;
 }
 
-/* Estilos específicos de la barra de intensidad */
+
 .intensity-section {
   background: rgba(99, 102, 241, 0.03);
   border-radius: 16px;
@@ -115,7 +108,7 @@
   font-size: 16px;
 }
 
-/* Botón de Analizar */
+
 .analyze-button {
   width: 100%;
   height: 50px;
@@ -137,9 +130,7 @@
   transform: translateY(2px);
 }
 
-/* =========================================
-   4. DIVISORES Y ESTADOS DE CARGA
-   ========================================= */
+
 .divider {
   text-align: center;
   margin: 35px 0;
@@ -181,9 +172,6 @@
   animation: shimmer .9s linear infinite; 
 }
 
-/* =========================================
-   5. BOTONES DE MOOD (EMOJIS)
-   ========================================= */
 .moods-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -248,9 +236,7 @@
   0% { background-position: -200% 0 } 
   100% { background-position: 200% 0 } 
 }
-/* =========================================
-   6. SECCIÓN DE AUDIENCIA (Adulto/Infantil)
-   ========================================= */
+
 .audience-section {
   margin-bottom: 25px;
   text-align: center;
@@ -340,7 +326,7 @@
   font-weight: 700;
 }
 
-/* ESTADO SELECCIONADO: INFANTIL (Rosa/Naranja) */
+
 .audience-card.kids.selected {
   border-color: #10b981; 
   transform: translateY(-8px);
@@ -366,12 +352,12 @@
   font-weight: 700;
 }
 
-/* Icono en blanco cuando está seleccionado */
+
 .audience-card.selected mat-icon {
   color: white !important;
 }
 
-/* Hover suave */
+
 .audience-card:hover:not(.selected) {
   border-color: #cbd5e1;
   background: #f8fafc;
@@ -395,7 +381,7 @@
   font-weight: 600;
 }
 
-/* ESTADO SELECCIONADO */
+
 .audience-card.selected {
   background: #ffffff;
   border-color: #6366f1;
@@ -410,7 +396,7 @@
   color: #6366f1;
 }
 
-/* Hover para los no seleccionados */
+
 .audience-card:hover:not(.selected) {
   background: #f1f5f9;
   border-color: #cbd5e1;
@@ -427,10 +413,10 @@
 .kids-bg {
   background: radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
               radial-gradient(circle at 100% 100%, rgba(20, 184, 166, 0.04) 0%, transparent 50%),
-              #f0fdf4; /* Un blanco con un toque verdoso muy ligero */
+              #f0fdf4;
 }
 
-/* Transición suave para que no pegue un salto */
+
 .mood-selector-container {
   transition: background 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 100vh;
@@ -440,7 +426,7 @@
   padding: 20px;
 }
 
-/* Animación de escaneo para la tarjeta */
+
 .analyzing-active {
   position: relative;
   overflow: hidden;
@@ -461,14 +447,14 @@
   );
   animation: scan 2s linear infinite;
 }
-/* El icono brilla cuando el usuario escribe */
+
 mat-form-field.mat-focused mat-icon[matSuffix] {
   color: #6366f1 !important;
   transform: rotate(-10deg) scale(1.2);
   transition: all 0.3s ease;
 }
 
-/* Bordes más suaves para el input */
+
 .full-width ::ng-deep .mdc-notched-outline__crest {
   border-radius: 12px 0 0 12px !important;
 }
@@ -476,7 +462,7 @@ mat-form-field.mat-focused mat-icon[matSuffix] {
   from { transform: translateY(-100%); }
   to { transform: translateY(100%); }
 }
-/* Ajuste para móviles */
+
 @media (max-width: 650px) {
   .audience-options {
     gap: 10px;
