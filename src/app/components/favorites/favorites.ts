@@ -47,9 +47,9 @@ export class FavoritesComponent implements OnInit {
 
   this.favoriteService.getFavorites().subscribe({
     next: (response) => {
-      console.log('Response completa:', response); // ⬅️ Debug
+      console.log('Response completa:', response); 
       
-      // Manejar diferentes formatos de respuesta
+
       if (Array.isArray(response)) {
         this.favorites = response;
       } else if (response && Array.isArray(response.tracks)) {
@@ -64,7 +64,7 @@ export class FavoritesComponent implements OnInit {
       console.error('Error loading favorites:', error);
       this.errorMessage = 'Error al cargar favoritos';
       this.loading = false;
-      this.favorites = []; // ⬅️ Inicializar vacío en caso de error
+      this.favorites = []; 
     }
   });
 }
