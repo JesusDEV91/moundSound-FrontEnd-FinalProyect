@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-// Material
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-// Tu nuevo componente
+
 import { MiniPlayerComponent } from './components/mini-player/mini-player';
 
 @Component({
